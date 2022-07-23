@@ -34,7 +34,7 @@ public class RecursiveBinarySearch {
             if(arr[midPoint] == target){
                 return true;
             }
-            else if(arr[midPoint] > target){
+            else if(arr[midPoint] < target){
                 return myBinaryRecursionSearch(Arrays.copyOfRange(arr, midPoint + 1, arr.length),target);
             }
             else{
