@@ -9,7 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What's your target?");
         float target = scanner.nextFloat();
-        System.out.println(LinearSearch.linearSearch(arr, target));
+        System.out.println(BinarySearch.binarySearch(arr, target));
     }
 
 }
