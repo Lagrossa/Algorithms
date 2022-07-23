@@ -7,15 +7,16 @@ public abstract class BinarySearch {
         int last = args.length-1;
 
         while(first <= last){
-            int midPoint = (int)Math.floor((double)(last-first)/2);
-            if(args[first+midPoint] > target){
-                last = first+midPoint;
-            }
-            else if(args[first+midPoint] < target){
-                first = first+midPoint;
-            }
-            else {
+            int midPoint = (int)Math.floor((double)(first+last)/2);
+            System.out.println(midPoint);
+            if(args[midPoint] == target){
                 return midPoint;
+            }
+            else if(args[midPoint] > target){
+                last = midPoint - 1;
+            }
+            else{
+                first = midPoint + 1;
             }
         }
 
