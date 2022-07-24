@@ -50,6 +50,8 @@ public class Main {
         System.out.println(Llist.toString());
         Llist.insert(3,8);
         System.out.println(Llist.toString());
+        Llist.remove(8);
+        System.out.println(Llist.toString());
     }
 
 }

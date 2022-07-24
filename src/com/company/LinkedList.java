@@ -47,6 +47,16 @@ public class LinkedList<E> {
         }
     }
 
+    void remove(int index){
+        Node<E> current = head;
+        for(int x = 0; x < index-1; x++){
+            current = current.nextNode;
+        }
+        Node<E> prevNode = current;
+        current = current.nextNode;
+        prevNode.nextNode = current.nextNode;
+
+    }
     /*
     Search and returns the first item in the list to match the key. Otherwise, will return null.
      */
