@@ -32,7 +32,7 @@ public class LinkedList<E> {
         head = node;
     }
 
-    void index(E data, int index){
+    void insert(E data, int index){
         if(index == 0){
             add(data);
         }
