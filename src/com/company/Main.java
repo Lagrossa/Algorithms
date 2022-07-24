@@ -26,6 +26,9 @@ public class Main {
         N1.nextNode = N2;
         N2.nextNode = N1;
         System.out.println(N1.nextNode.getInfo());
+        LinkedList<Integer> Llist = new LinkedList<>();
+        Llist.head = N1;
+        System.out.println(Llist.isEmpty());
 
     }
 
