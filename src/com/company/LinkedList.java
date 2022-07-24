@@ -32,6 +32,11 @@ public class LinkedList<E> {
         head = node;
     }
 
+    /*
+    Inserts a given point of data at the index parameter in the linked list.
+    @param data The data of the new node.
+    @param index The index your data will be inserted.
+    */
     void insert(E data, int index){
         if(index == 0){
             add(data);
@@ -46,7 +51,10 @@ public class LinkedList<E> {
             current.nextNode = insertNode;
         }
     }
-
+    /*
+        Removes the node at a specified index.
+        @param index The index that should be removed from your data.
+        */
     void remove(int index){
         Node<E> current = head;
         for(int x = 0; x < index-1; x++){
