@@ -4,9 +4,8 @@ public class Node<E> {
     E self;
     Node<E> nextNode;
 
-    Node(E data, Node<E> nextNode){
+    Node(E data){
         this.self = data;
-        this.nextNode = nextNode;
     }
 
     E getInfo(){
