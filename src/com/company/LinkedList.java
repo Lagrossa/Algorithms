@@ -56,14 +56,18 @@ public class LinkedList<E> {
         @param index The index that should be removed from your data.
         */
     void remove(int index){
-        Node<E> current = head;
-        for(int x = 0; x < index-1; x++){
-            current = current.nextNode;
+        if(index == 0){
+            head = head.nextNode;
         }
-        Node<E> prevNode = current;
-        current = current.nextNode;
-        prevNode.nextNode = current.nextNode;
-
+        else {
+            Node<E> current = head;
+            Node<E> prevNode = current;
+            for (int x = 0; x < index; x++) {
+                prevNode = current;
+                current = current.nextNode;
+            }
+            prevNode.nextNode = current.nextNode;
+        }
     }
     /*
     Search and returns the first item in the list to match the key. Otherwise, will return null.
