@@ -23,13 +23,17 @@ public class Main {
 //        }
         Node<Integer> N1 = new Node<>(5);
         Node<Integer> N2 = new Node<>(6);
+        Node<Integer> N3 = new Node<>(6);
+        Node<Integer> N4 = new Node<>(6);
         N1.nextNode = N2;
-        N2.nextNode = N1;
+        N2.nextNode = N3;
+        N3.nextNode = N4;
+
         System.out.println(N1.nextNode.getInfo());
         LinkedList<Integer> Llist = new LinkedList<>();
         Llist.head = N1;
         System.out.println(Llist.isEmpty());
-
+        System.out.println(Llist.size());
     }
 
 }
