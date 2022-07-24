@@ -9,9 +9,9 @@ public class LinkedList<E> {
     }
 
     int size(){
-        int count = 1;
+        int count = 0;
         Node<E> current = head;
-        while(current.nextNode != null){
+        while(current != null){
             count++;
             current = current.nextNode;
         }
