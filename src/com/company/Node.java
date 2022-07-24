@@ -1,14 +1,14 @@
 package com.company;
 
 public class Node<E> {
-    E self;
+    E data;
     Node<E> nextNode;
 
     Node(E data){
-        this.self = data;
+        this.data = data;
     }
 
     E getInfo(){
-        return self;
+        return data;
     }
 }
