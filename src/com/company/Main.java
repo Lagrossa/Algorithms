@@ -47,6 +47,7 @@ public class Main {
 
         Node<Integer> test = Llist.search(5);
         System.out.println(test);
+        System.out.println(Llist.toString());
     }
 
 }

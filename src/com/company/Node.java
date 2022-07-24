@@ -11,4 +11,8 @@ public class Node<E> {
     E getInfo(){
         return data;
     }
+
+    public String toString(){
+        return "[" + data.toString() +"]";
+    }
 }

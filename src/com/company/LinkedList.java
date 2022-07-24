@@ -32,6 +32,9 @@ public class LinkedList<E> {
         head = node;
     }
 
+    /*
+    Search and returns the first item in the list to match the key. Otherwise, will return null.
+     */
     Node<E> search(E key){
         Node<E> current = head;
         while(current != null){
@@ -43,5 +46,23 @@ public class LinkedList<E> {
             }
         }
         return null;
+    }
+
+    public String toString(){
+        String myReturn = "";
+        Node<E> current = head;
+        while(current != null){
+            if(current == head){
+                myReturn += "HEAD " + current.toString() + " -> ";
+            }
+            else if(current.nextNode == null){
+                myReturn += "> " + current.toString() + " TAIL";
+            }
+            else{
+                myReturn += current.toString() + "-";
+            }
+            current = current.nextNode;
+        }
+        return myReturn;
     }
 }
