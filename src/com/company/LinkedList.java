@@ -32,6 +32,21 @@ public class LinkedList<E> {
         head = node;
     }
 
+    void index(E data, int index){
+        if(index == 0){
+            add(data);
+        }
+        else{
+            Node<E> current = head;
+            for(int i = 0; i < index-1; i++){
+                current = current.nextNode;
+            }
+            Node<E> insertNode = new Node<>(data);
+            insertNode.nextNode = current.nextNode;
+            current.nextNode = insertNode;
+        }
+    }
+
     /*
     Search and returns the first item in the list to match the key. Otherwise, will return null.
      */
