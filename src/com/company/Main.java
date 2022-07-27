@@ -32,12 +32,12 @@ public class Main {
 //        N3.nextNode = N4;
 //
 //        System.out.println(N1.nextNode.getInfo());
-        LinkedList<Integer> Llist = new LinkedList<>();
+        LinkedList<Float> Llist = new LinkedList<>();
 //        Llist.head = N1;
 //        System.out.println(Llist.isEmpty());
 //        System.out.println(Llist.size());
-        Llist.add(4);
-        Llist.add(5);
+        Llist.add(4.0);
+        Llist.add(5.0);
         Llist.add(6);
         Llist.add(14);
         Llist.add(66);
@@ -52,6 +52,7 @@ public class Main {
         System.out.println(Llist.toString());
         Llist.remove(8);
         System.out.println(Llist.toString());
+        System.out.println(MergeSort.mergeSort(Llist));
     }
 
 }
