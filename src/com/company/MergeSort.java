@@ -20,6 +20,8 @@ public abstract class MergeSort {
             float[] leftList = mergeSort(Arrays.copyOfRange(list, 0, (int)Math.floor((double)list.length/2)));
             float[] rightList = mergeSort(Arrays.copyOfRange(list, (int)Math.floor((double)list.length/2), list.length));
 
+            System.out.println(Arrays.toString(leftList));
+            System.out.println(Arrays.toString(rightList));
             return merge(leftList, rightList);
         }
     }
