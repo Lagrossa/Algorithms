@@ -30,21 +30,21 @@ public abstract class MergeSort {
         System.out.println("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
         System.out.println(Arrays.toString(left));
         System.out.println(Arrays.toString(right));
-        float[] newList = new float[left.length+1];
+        float[] newList = new float[left.length + right.length];
         int listIndex = 0;
         int x = 0;
         int y = 0;
         while(x < left.length && y < right.length){
             if(left[x] > right[y]){
-                newList[listIndex] = right[++y];
+                newList[listIndex] = right[y];
                 listIndex++;
-                newList[listIndex] = left[++x];
+                newList[listIndex] = left[x];
                 listIndex++;
             }
             else{
-                newList[listIndex] = left[++x];
+                newList[listIndex] = left[x];
                 listIndex++;
-                newList[listIndex] = right[++y];
+                newList[listIndex] = right[y];
                 listIndex++;
             }
             x++;
