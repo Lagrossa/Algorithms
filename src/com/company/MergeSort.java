@@ -44,7 +44,7 @@ public abstract class MergeSort {
             while(left[x] <= right[y]){
                 newList[listIndex] = left[x];
                 listIndex++;
-                x++;
+                x++; //ugh, bugged. I'll fix later..
                 System.out.println("LIST UPDATE2" + Arrays.toString(newList));
             }
         }
