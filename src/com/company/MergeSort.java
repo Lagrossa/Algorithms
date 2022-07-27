@@ -27,23 +27,29 @@ public abstract class MergeSort {
     }
 
     public static float[] merge(float[] left, float[] right){
-        float[] newList = new float[left.length];
+        System.out.println("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+        System.out.println(Arrays.toString(left));
+        System.out.println(Arrays.toString(right));
+        float[] newList = new float[left.length + right.length];
         int listIndex = 0;
-        for(int x = 0; x < left.length-1; x++){
-            for(int y = 0; y < left.length-1; y++){
-                if(x > y){
-                    newList[listIndex] = y;
-                    listIndex++;
-                    newList[listIndex] = x;
-                }
-                else{
-                    newList[listIndex] = x;
-                    listIndex++;
-                    newList[listIndex] = y;
-                }
+        int x = 0;
+        int y = 0;
+        while(x < left.length && y < right.length){
+            if(left[x] > right[y]){
+                newList[listIndex] = right[y];
+                listIndex++;
+                newList[listIndex] = left[x];
+                listIndex++;
             }
+            else{
+                newList[listIndex] = right[x];
+                listIndex++;
+                newList[listIndex] = left[y];
+                listIndex++;
+            }
+            x++;
+            y++;
         }
-
         return newList;
     }
 }
