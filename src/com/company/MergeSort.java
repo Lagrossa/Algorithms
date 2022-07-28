@@ -34,7 +34,7 @@ public abstract class MergeSort {
         int listIndex = 0;
         int x = 0;
         int y = 0;
-        while(x < left.length && y < right.length) {
+        while(x < left.length || y < right.length) {
             while (x < left.length) {
                 if (left[x] > right[y]) {
                     newList[listIndex] = right[y];
@@ -42,13 +42,13 @@ public abstract class MergeSort {
                     y++;
                     System.out.println("LIST UPDATE1" + Arrays.toString(newList));
                 }
-                while (x < left.length) {
-                    if (left[x] <= right[y]) {
-                        newList[listIndex] = left[x];
-                        listIndex++;
-                        x++; //ugh, bugged. I'll fix later...
-                        System.out.println("LIST UPDATE2" + Arrays.toString(newList));
-                    }
+            }
+            while (y < right.length) {
+                if (left[x] <= right[y]) {
+                    newList[listIndex] = left[x];
+                    listIndex++;
+                    x++; //ugh, bugged. I'll fix later...
+                    System.out.println("LIST UPDATE2" + Arrays.toString(newList));
                 }
             }
         }
