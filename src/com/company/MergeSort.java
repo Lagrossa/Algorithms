@@ -35,13 +35,13 @@ public abstract class MergeSort {
         int x = 0;
         int y = 0;
         while(x < left.length && y < right.length){
-            while(left[x] > right[y]){
+            if(left[x] > right[y]){
                 newList[listIndex] = right[y];
                 listIndex++;
                 y++;
                 System.out.println("LIST UPDATE1" + Arrays.toString(newList));
             }
-            while(left[x] <= right[y]){
+            if(left[x] <= right[y]){
                 newList[listIndex] = left[x];
                 listIndex++;
                 x++; //ugh, bugged. I'll fix later...
