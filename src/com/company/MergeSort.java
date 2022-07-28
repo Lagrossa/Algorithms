@@ -36,22 +36,36 @@ public abstract class MergeSort {
         int y = 0;
         while(x < left.length || y < right.length) {
             if(x < left.length){
-                System.out.println(x + "" + left.length);
-                while(left[x] < right[y]){
+                System.out.println("TATATATATATA");
+                System.out.println("TRUE");
+                if(y < right.length){
+                    System.out.println(x + "" + left.length);
+                    while(left[x] < right[y]){
+                        newList[listIndex] = left[x];
+                        listIndex++;
+                        x++;
+                        System.out.println(Arrays.toString(newList) + " NEW LIST UPDATED IN LOOP 1 \n ");
+                        break;
+                    }
+                }
+                else{
+                    System.out.println("DOIN THIS ELSE 1");
                     newList[listIndex] = left[x];
                     listIndex++;
-                    x = x+1;
-                    System.out.println(Arrays.toString(newList) + " NEW LIST UPDATED IN LOOP 1 \n ");
-                    break;
+                    x++;
+                    System.out.println(Arrays.toString(newList) + " NEW LIST UPDATED IN LOOP 1 Y MAX CAPACITY\n ");
                 }
             }
             if(y < right.length){
+                System.out.println("TETETETETE");
                 if(x < left.length){
+                    System.out.println("DOIN THIS BREAKS 2");
                     while(left[x] >= right[y]){
                         newList[listIndex] = right[y];
                         listIndex++;
                         y++;
                         System.out.println(Arrays.toString(newList) + " NEW LIST UPDATED IN LOOP 2 \n ");
+                        break;
                     }
                 }
                 else{
