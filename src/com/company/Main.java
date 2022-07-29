@@ -53,7 +53,7 @@ public class Main {
         System.out.println(Llist.toString());
         Llist.remove(8);
         System.out.println(Llist.toString());
-        float[] arrayTest = {5,4, 4, 4 ,2,3,1,6, 4, 4,7,8};
+        float[] arrayTest = {5,4, 4, 4 , 2, 3, 1,6, 4, 4,7,8};
         System.out.println(Arrays.toString(MergeSort.mergeSort(arrayTest)));
     }
 
